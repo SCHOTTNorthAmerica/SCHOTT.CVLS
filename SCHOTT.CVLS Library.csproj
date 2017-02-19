@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{672D52CC-995A-4EC4-9137-46EE285E0635}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCHOTT.CVLS</RootNamespace>
+    <AssemblyName>SCHOTT.CVLS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\SCHOTT.CVLS Debug\</OutputPath>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\SCHOTT.CVLS\</OutputPath>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SCHOTT.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\..\..\packages\SCHOTT.Core.1.0.0\lib\net35\SCHOTT.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Threading, Version=1.0.2856.102, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\TaskParallelLibrary.1.0.2856.0\lib\Net35\System.Threading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SCHOTT\CVLS\Communications\Configuration\ConfigurationProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Diagnostics\DiagnosticsProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Binary\Workers\IniUploader.cs" />
+    <Compile Include="SCHOTT\CVLS\Serial\Workers\IniUploader.cs" />
+    <Compile Include="SCHOTT\CVLS\Serial\Workers\LogDownloader.cs" />
+    <Compile Include="SCHOTT\CVLS\Serial\Workers\IniDownloader.cs" />
+    <Compile Include="SCHOTT\CVLS\Utilities\FileTransfer.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Discovery\DiscoveryObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\ContinuousStrobe\Channels\ContinuousStrobeChannelObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\ContinuousStrobe\Channels\ContinuousStrobeChannelProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\ContinuousStrobe\ContinuousStrobeObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\ContinuousStrobe\ContinuousStrobeProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\ControlsObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\ControlsProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\Equalizer\EqualizerObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\Equalizer\EqualizerProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\Fan\FanObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\Fan\FanProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\Led\Channels\LedChannelObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\Led\Channels\LedChannelProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\Led\LedObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\Led\LedProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\TriggeredStrobe\Channels\TriggeredStrobeChannelObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\TriggeredStrobe\Channels\TriggeredStrobeChannelProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\TriggeredStrobe\TriggeredStrobeObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Controls\TriggeredStrobe\TriggeredStrobeProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\LegacyProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\SettingsObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Enums\EnumConversion.cs" />
+    <Compile Include="SCHOTT\CVLS\Enums\Enums.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Binary\BinarySocket.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Binary\BinaryCommand.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Binary\Workers\IniDownloader.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Binary\Enums\Enums.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Binary\Workers\LogDownloader.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Binary\Workers\FirmwareUploader.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Discovery\Discovery.cs" />
+    <Compile Include="SCHOTT\CVLS\Serial\Workers\FirmwareUploader.cs" />
+    <Compile Include="SCHOTT\CVLS\Serial\Workers\Utilities.cs" />
+    <Compile Include="SCHOTT\CVLS\Utilities\DataConversions.cs" />
+    <Compile Include="SCHOTT\CVLS\Ethernet\Legacy\LegacySocket.cs" />
+    <Compile Include="SCHOTT\CVLS\Firmware.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Identification\IdentificationObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Identification\IdentificationProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Memory\MemoryObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Memory\MemoryProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\System\TimeObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\System\SystemObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\System\SystemProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Equalizer\EqualizerStatusObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Equalizer\EqualizerStatusProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\StatusProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Fan\FanStatusObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Fan\FanStatusProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Temperature\TemperatureObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Temperature\TemperatureProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Voltage\VoltageObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\Voltage\VoltageProtocol.cs" />
+    <Compile Include="SCHOTT\CVLS\Serial\CVLSComPort.cs" />
+    <Compile Include="SCHOTT\CVLS\Serial\CVLSPortType.cs" />
+    <Compile Include="SCHOTT\CVLS\Serial\CVLSThreadedComPort.cs" />
+    <Compile Include="SCHOTT\CVLS\Communications\Status\StatusObject.cs" />
+    <Compile Include="SCHOTT\CVLS\Utilities\Checksums.cs" />
+    <Compile Include="SCHOTT\CVLS\Utilities\LogData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Firmware\customer_firmware_1.00.bin" />
+    <EmbeddedResource Include="Firmware\customer_firmware_1.10.bin" />
+    <EmbeddedResource Include="Firmware\customer_firmware_1.11.bin" />
+    <EmbeddedResource Include="Firmware\customer_firmware_1.12.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Licenses\SCHOTT.CVLS License - MIT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Firmware\customer_firmware_1.14.bin" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
