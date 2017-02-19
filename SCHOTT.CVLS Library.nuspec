@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>SCHOTT.CVLS</id>
+		<version>1.0.0</version>
+		<title>SCHOTT.CVLS Library</title>
+		<authors>jgvicke</authors>
+		<owners>jgvicke</owners>
+		<licenseUrl>https://github.com/SCHOTTNorthAmerica/SCHOTT.CVLS/blob/master/Licenses/SCHOTT.CVLS%20License%20-%20MIT.txt</licenseUrl>
+		<projectUrl>https://github.com/SCHOTTNorthAmerica/SCHOTT.CVLS</projectUrl>
+		<iconUrl>https://avatars0.githubusercontent.com/u/23213816?v=3&amp;s=200</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Core functions used by SCHOTT CV-LS products.</description>
+		<releaseNotes>Initial Release</releaseNotes>
+		<copyright>Copyright 2016</copyright>
+		<tags>SCHOTT CVLS</tags>
+		<dependencies>
+			<dependency id="SCHOTT.Core" version="1.0.0" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\SCHOTT.CVLS\SCHOTT.CVLS.dll" target="lib\net35\SCHOTT.CVLS.dll" />
+		<file src="bin\SCHOTT.CVLS\SCHOTT.CVLS.xml" target="lib\net35\SCHOTT.CVLS.xml" />
+	</files>
+</package>
